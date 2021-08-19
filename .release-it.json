@@ -7,7 +7,7 @@
     "requireUpstream": false,
     "addUntrackedFiles": false,
     "commit": true,
-    "commitMessage": "feat: Release ${version}",
+    "commitMessage": "feat: release ${version}",
     "commitArgs": "",
     "tag": true,
     "tagName": "v${version}",
