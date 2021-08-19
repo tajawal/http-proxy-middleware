@@ -15,13 +15,15 @@
     "eslint:fix": "yarn eslint --fix",
     "prettier": "prettier --list-different \"**/*.{js,ts,md,yml,json,html}\"",
     "prettier:fix": "prettier --write \"**/*.{js,ts,md,yml,json,html}\"",
-    "prebuild": "yarn clean",
     "build": "tsc",
     "pretest": "yarn build",
     "test": "jest",
     "precoverage": "yarn build",
     "coverage": "jest --coverage --coverageReporters=lcov",
-    "prepare": "husky install && yarn build && rm dist/tsconfig.tsbuildinfo"
+    "prepare": "husky install && yarn build && rm dist/tsconfig.tsbuildinfo",
+    "release:major": "npm run build && release-it major",
+    "release:minor": "npm run build && release-it minor",
+    "release:patch": "npm run build && release-it patch"
   },
   "repository": {
     "type": "git",
@@ -83,7 +85,7 @@
   },
   "dependencies": {
     "@types/http-proxy": "^1.17.5",
-    "http-proxy": "^1.18.1",
+    "@tajawal/http-proxy": "^2.0.13",
     "is-glob": "^4.0.1",
     "is-plain-obj": "^3.0.0",
     "micromatch": "^4.0.2"
