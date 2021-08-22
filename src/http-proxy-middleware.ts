@@ -1,7 +1,7 @@
 import type * as https from 'https';
 import type * as express from 'express';
 import type { Filter, Request, RequestHandler, Response, Options } from './types';
-import * as httpProxy from 'http-proxy';
+import * as httpProxy from '@tajawal/http-proxy';
 import { createConfig, Config } from './config-factory';
 import * as contextMatcher from './context-matcher';
 import * as handlers from './_handlers';
